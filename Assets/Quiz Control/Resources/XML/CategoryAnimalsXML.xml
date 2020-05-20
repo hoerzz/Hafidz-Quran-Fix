@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <record>
+    <Question>Which animal is smaller?</Question>
+    <Answers>
+      <Answer correct="true">Mouse</Answer>
+      <Answer correct="false">Cat</Answer>
+      <Answer correct="false">Dog</Answer>
+      <Answer correct="false">Elephant</Answer>
+    </Answers>
+    <Bonus>100</Bonus>
+    <Time>8</Time>
+  </record>
+  <record>
+    <Question>Which animal is faster?</Question>
+    <Answers>
+      <Answer correct="true">Leopard</Answer>
+      <Answer correct="false">Turtle</Answer>
+      <Answer correct="false">Rabbit</Answer>
+      <Answer correct="false">Worm</Answer>
+    </Answers>
+    <Bonus>100</Bonus>
+    <Time>8</Time>
+  </record>
+  <record>
+    <Question>How many legs does an ant have?</Question>
+    <Answers>
+      <Answer correct="true">6</Answer>
+      <Answer correct="false">8</Answer>
+      <Answer correct="false">36</Answer>
+      <Answer correct="false">2</Answer>
+    </Answers>
+    <Bonus>100</Bonus>
+    <Time>8</Time>
+  </record>
+  <record>
+    <Question>What is the study of animals called?</Question>
+    <Answers>
+      <Answer correct="true">Zoology</Answer>
+      <Answer correct="false">Geography</Answer>
+      <Answer correct="false">Geology</Answer>
+      <Answer correct="false">Scientology</Answer>
+    </Answers>
+    <Bonus>100</Bonus>
+    <Time>8</Time>
+  </record>
+  <record>
+    <Question>What is the name of a baby Alpaca?</Question>
+    <Answers>
+      <Answer correct="true">Cria</Answer>
+      <Answer correct="false">Calf</Answer>
+      <Answer correct="false">Cub</Answer>
+      <Answer correct="false">Bob</Answer>
+    </Answers>
+    <Bonus>100</Bonus>
+    <Time>8</Time>
+  </record>
+</data-set>

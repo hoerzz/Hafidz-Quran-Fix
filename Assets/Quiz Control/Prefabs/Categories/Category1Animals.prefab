@@ -1,0 +1,164 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &174584
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 474584}
+  - component: {fileID: 11474584}
+  m_Layer: 0
+  m_Name: Category1Animals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &474584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174584}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11474584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814527ed6b5820247a732f012786e2b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  categoryName: Animals
+  categoryIcon: {fileID: 21300000, guid: 10b36f90404c7634bab7b8813e34d697, type: 3}
+  categoryColor: {r: 1, g: 0.31372547, b: 0.31372547, a: 1}
+  questions:
+  - question: What is the study of animals called?
+    image: {fileID: 0}
+    sound: {fileID: 0}
+    answers:
+    - answer: Scientology
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Geography
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Zoology
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - answer: Geology
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    followup: 
+    bonus: 100
+    time: 8
+  - question: Which animal is smaller?
+    image: {fileID: 0}
+    sound: {fileID: 0}
+    answers:
+    - answer: Mouse
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - answer: Dog
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Cat
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Elephant
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    followup: 
+    bonus: 100
+    time: 8
+  - question: What is the name of a baby Alpaca?
+    image: {fileID: 0}
+    sound: {fileID: 0}
+    answers:
+    - answer: Bob
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Cub
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Cria
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - answer: Calf
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    followup: 
+    bonus: 100
+    time: 8
+  - question: How many legs does an ant have?
+    image: {fileID: 0}
+    sound: {fileID: 0}
+    answers:
+    - answer: 6
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: 2
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: 8
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - answer: 36
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    followup: 
+    bonus: 100
+    time: 8
+  - question: Which animals is faster?
+    image: {fileID: 0}
+    sound: {fileID: 0}
+    answers:
+    - answer: Leopard
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 1
+    - answer: Rabbit
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Worm
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    - answer: Turtle
+      image: {fileID: 0}
+      sound: {fileID: 0}
+      isCorrect: 0
+    followup: 
+    bonus: 100
+    time: 8

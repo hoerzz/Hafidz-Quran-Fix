@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-set xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <record>
+    <Question>Which one is food?</Question>
+    <Answers>
+      <Answer image="Cat" correct="false"></Answer>
+      <Answer image="Image01" correct="true"></Answer>
+      <Answer image="Image04" correct="false"></Answer>
+      <Answer image="Image07" correct="false"></Answer>
+    </Answers>
+    <Bonus>100</Bonus>
+    <Time>8</Time>
+  </record>
+</data-set>
