@@ -13,10 +13,10 @@ public class CreatePuzzleButtonsAndAnimators : MonoBehaviour {
 
 	//Mengatur Banyaknya Puzzle di setiap level
 	private int puzzleGame1 = 6;
-	private int puzzleGame2 = 12;
-	private int puzzleGame3 = 18;
-	private int puzzleGame4 = 24;
-	private int puzzleGame5 = 30;
+	private int puzzleGame2 = 8;
+	private int puzzleGame3 = 12;
+	private int puzzleGame4 = 16;
+	private int puzzleGame5 = 20;
 	
 	private List<Button> level1Buttons = new List<Button>();
 	private List<Button> level2Buttons = new List<Button>();

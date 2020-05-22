@@ -40,19 +40,19 @@ public class SetupPuzzleGame : MonoBehaviour {
 			break;
 			
 		case 1:
-			looper = 12;
+			looper = 8;
 			break;
 			
 		case 2:
-			looper = 18;
+			looper = 12;
 			break;
 			
 		case 3:
-			looper = 24;
+			looper = 16;
 			break;
 			
 		case 4:
-			looper = 30;
+			looper = 20;
 			break;
 		}
 

@@ -31,6 +31,10 @@ public class PuzzleGameManager : MonoBehaviour {
 	private int countCorrectGuess;
 	private int gameGuess;
 
+	public Text tscore, tscore2, tscore3, tscore4, tscore5, tscoreakhir;
+
+	int skor=0;
+
 	public void PickAPuzzle() {
 
 		if (!firstGuess) {
@@ -57,6 +61,8 @@ public class PuzzleGameManager : MonoBehaviour {
 
 			countTryGuess++;
 
+			firstGuess = secondGuess = false;
+		
 		}
 
 	}
@@ -83,10 +89,36 @@ public class PuzzleGameManager : MonoBehaviour {
 		}
 
 		yield return new WaitForSeconds (.7f);
+		
+		if(firstGuessPuzzle == secondGuessPuzzle) {
+				// Debug.Log ("The Puzzles Match");
+            skor+=15;
+			}
+            else
+            {
+                // Debug.Log ("The Puzzles Dont Match");
+                if (skor == 0)
+                {
+                    skor = 0;
+                }
+                else
+                {
+                    skor -= 5;
+                }
+            }
 
-		firstGuess = secondGuess = false;
 		
 	}
+
+	void Update()
+    {
+        tscore.text = skor.ToString();
+		tscore2.text = skor.ToString();
+		tscore3.text = skor.ToString();
+		tscore4.text = skor.ToString();
+		tscore5.text = skor.ToString();
+        tscoreakhir.text = "Skor Kamu : " + skor.ToString();
+    }
 
 	void CheckIfTheGameIsFinished() {
 		countCorrectGuess++;
@@ -94,6 +126,7 @@ public class PuzzleGameManager : MonoBehaviour {
 		if (countCorrectGuess == gameGuess) {
 			Debug.Log("Game Ends No More Puzzles");
 			CheckHowManyGuesses();
+			
 		}
 
 	}
@@ -147,7 +180,7 @@ public class PuzzleGameManager : MonoBehaviour {
 
 		countTryGuess = 0;
 		countCorrectGuess = 0;
-
+		skor = 0;
 		gameFinished.HideGameFinishedPanel ();
 
 		return puzzleButtonsAnimators;
