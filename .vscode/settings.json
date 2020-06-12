@@ -52,5 +52,16 @@
         "ProjectSettings/":true,
         "temp/":true,
         "Temp/":true
-    }
+    },
+    "editor.suggest.shareSuggestSelections": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "csharp.semanticHighlighting.enabled": true,
+    "csharp.suppressDotnetInstallWarning": true,
+    "csharp.suppressProjectJsonWarning": true,
+    "csharp.suppressDotnetRestoreNotification": true,
+    "csharp.supressBuildAssetsNotification": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableRoslynAnalyzers": true,
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+    "editor.codeActionsOnSave": null
 }

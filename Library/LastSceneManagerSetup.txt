@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scane/Revisi/Menu Level.unity
+- path: Assets/Scane/Level/Stage5.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

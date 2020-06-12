@@ -11,7 +11,7 @@ public class PuzzleGameManager : MonoBehaviour {
 	[SerializeField]
 	private GameFinished gameFinished;
 
-	private List<Button> puzzleButtons = new List<Button>();
+	private List<Button> puzzleButtons = new List<Button>(); 
 	
 	private List<Animator> puzzleButtonsAnimators = new List<Animator>();
 	[SerializeField]
@@ -31,9 +31,14 @@ public class PuzzleGameManager : MonoBehaviour {
 	private int countCorrectGuess;
 	private int gameGuess;
 
-	public Text tscore, tscore2, tscore3, tscore4, tscore5, tscoreakhir;
+	public Text tscore, tscore2, tscore3, tscore4, tscore5, tscoreDad1, tscoreDad2, tscoreDad3, tscoreDad4, tscoreDad5, tscoreakhir;
 
-	int skor=0;
+	public static int skor = 0;
+
+	public GameObject parent_puzzle;
+	public bool selesai = false;
+	public GameObject gameSelesai;
+	public GameObject[] panelDragAndDrop;
 
 	public void PickAPuzzle() {
 
@@ -69,7 +74,7 @@ public class PuzzleGameManager : MonoBehaviour {
 
 	IEnumerator CheckIfThePuzzlesMatch(Sprite puzzleBackgroundImage) {
 	
-		yield return new WaitForSeconds (1.7f);
+		yield return new WaitForSeconds (0.2f);
 
 		if (firstGuessPuzzle == secondGuessPuzzle) {
 		
@@ -88,11 +93,11 @@ public class PuzzleGameManager : MonoBehaviour {
 		
 		}
 
-		yield return new WaitForSeconds (.7f);
+		yield return new WaitForSeconds (0.2f);
 		
 		if(firstGuessPuzzle == secondGuessPuzzle) {
 				// Debug.Log ("The Puzzles Match");
-            skor+=15;
+            skor+=20;
 			}
             else
             {
@@ -117,6 +122,11 @@ public class PuzzleGameManager : MonoBehaviour {
 		tscore3.text = skor.ToString();
 		tscore4.text = skor.ToString();
 		tscore5.text = skor.ToString();
+		tscoreDad1.text = skor.ToString();
+		tscoreDad2.text = skor.ToString();
+		tscoreDad3.text = skor.ToString();
+		tscoreDad4.text = skor.ToString();
+		tscoreDad5.text = skor.ToString();
         tscoreakhir.text = "Skor Kamu : " + skor.ToString();
     }
 
@@ -131,7 +141,7 @@ public class PuzzleGameManager : MonoBehaviour {
 
 	}
 
-	void CheckHowManyGuesses() {
+	public void CheckHowManyGuesses() {
 		int howManyGuesses = 0;
 
 		switch(level) {
@@ -175,7 +185,7 @@ public class PuzzleGameManager : MonoBehaviour {
 
 	}
 
-	public List<Animator> ResetGameplay() {
+	public List<Animator> ResetGameplayPuzzle() {
 		firstGuess = secondGuess = false;
 
 		countTryGuess = 0;
@@ -186,15 +196,34 @@ public class PuzzleGameManager : MonoBehaviour {
 		return puzzleButtonsAnimators;
 	}
 
+	public List<Animator> ResetGameplay() {
+        for (int i = 0; i < 4; i++)
+        {
+            parent_puzzle.transform.GetChild(i).GetComponent<DragAndDropController>().on_tempel = false;
+            parent_puzzle.transform.GetChild(i).GetComponent<DragAndDropController>().on_pos = false;
+            parent_puzzle.transform.GetChild(i).position = parent_puzzle.transform.GetChild(i).GetComponent<DragAndDropController>().pos_awal;
+            parent_puzzle.transform.GetChild(i).localScale = parent_puzzle.transform.GetChild(i).GetComponent<DragAndDropController>().scale_awal;
+        }
+        selesai = false;
+        countTryGuess = 0;
+		gameSelesai.SetActive (false);
+		panelDragAndDrop[0].SetActive (false);
+		panelDragAndDrop[1].SetActive (false);
+		panelDragAndDrop[2].SetActive (false);
+		panelDragAndDrop[3].SetActive (false);
+		panelDragAndDrop[4].SetActive (false);
+      return puzzleButtonsAnimators;
+	}
+
 	IEnumerator TurnPuzzleButtonUp(Animator anim, Button btn, Sprite puzzleImage) {
 		anim.Play ("TurnUp");
-		yield return new WaitForSeconds (.4f);
+		yield return new WaitForSeconds (0.2f);
 		btn.image.sprite = puzzleImage;
 	}
 
 	IEnumerator TurnPuzzleButtonBack(Animator anim, Button btn, Sprite puzzleImage) {
 		anim.Play ("TurnBack");
-		yield return new WaitForSeconds (.4f);
+		yield return new WaitForSeconds (0.2f);
 		btn.image.sprite = puzzleImage;
 	}
 
